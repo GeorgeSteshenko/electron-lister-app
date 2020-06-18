@@ -1,0 +1,20 @@
+{
+  "name": "listerapp",
+  "version": "1.0.0",
+  "description": "Lister desktop app, list anything",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/menu.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/menu.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron Lister App\"",
+    "package-linux": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/menu.png --prune=true --out=release-builds"
+  },
+  "author": "Yegor Steshenko",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^9.0.4"
+  },
+  "devDependencies": {
+    "electron-packager": "^14.2.1"
+  }
+}
